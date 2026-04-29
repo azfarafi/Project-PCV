@@ -125,21 +125,5 @@ python restoration.py
 
 ---
 
-## Kesimpulan
 
-Pendekatan manual menggunakan NumPy berhasil melakukan restorasi citra dengan baik. Kombinasi median filter, histogram equalization, dan sharpening memberikan hasil yang lebih bersih dan tajam dibanding citra awal.
-
-Namun, masih terdapat ruang untuk peningkatan seperti:
-
-* Penggunaan Gaussian filter manual
-* Adaptive histogram equalization
-* Parameter tuning kernel sharpening
-
----
-
-## Catatan
-
-Semua operasi dilakukan secara manual sesuai ketentuan tugas tanpa menggunakan fungsi processing dari OpenCV.
-
----
 
