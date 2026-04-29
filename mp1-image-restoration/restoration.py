@@ -18,7 +18,7 @@ for k in range(ch):
             img_median[i, j, k] = np.median(jendela)
 
 # HISTOGRAM
-hist = np.bincount(img.ravel(), minlength=256)
+hist = np.bincount(img_median.ravel(), minlength=256)
 cdf = np.cumsum(hist)
 cdf_normalized = cdf * 255 / cdf[-1]
 lut = np.round(cdf_normalized).astype(np.uint8)
@@ -40,7 +40,7 @@ for k in range(ch):
             nilai = (jendela * kernel_sharpen).sum()
             img_sharpen[i, j, k] = np.clip(nilai, 0, 255)
 
-
+cv2.imwrite('output/lena_restored.png', img_sharpen)
 
 plt.figure(figsize=(12,10))
 
@@ -95,7 +95,10 @@ plt.hist(img_sharpen.ravel(), bins=256)
 plt.title("Final Histogram")
 
 plt.tight_layout()
+plt.savefig('output/visualisasi_pipeline.png')
 plt.show()
+
+cv2.imshow('Lena Restored', img_sharpen)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
