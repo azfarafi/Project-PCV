@@ -1,9 +1,8 @@
 # Mini Project 1 Image Restoration
 
-## Nama & NRP
+**Nama :** Azfarafi Gustiar Jati
 
-**Nama:** Azfarafi Gustiar Jati
-**NRP:** 5024241037
+**NRP :** 5024241037
 
 ---
 
@@ -34,7 +33,6 @@ Citra yang digunakan adalah `lena_noisy.png`, dan hasil akhirnya disimpan sebaga
 **Tujuan:**
 Menghilangkan noise terutama **salt-and-pepper noise**
 
----
 
 ### 2. Histogram Equalization (Manual)
 
@@ -47,7 +45,6 @@ Menghilangkan noise terutama **salt-and-pepper noise**
 **Tujuan:**
 Meningkatkan kontras citra
 
----
 
 ### 3. Sharpening (Kernel Manual)
 
@@ -80,19 +77,27 @@ Gambar berikut menunjukkan:
 
 ![Pipeline Visualization](output/visualisasi_pipeline.png)
 
-### Hasil Akhir
+### Perbandingan Sebelum vs Sesudah
 
-![Final Result](output/lena_restored.png)
+| Sebelum (Noisy)           | Sesudah (Restored)            |
+| ------------------------- | ----------------------------- |
+| ![](input/lena_noisy.png) | ![](output/lena_restored.png) |
 
----
 
-## Analisis
+## Analisis Singkat
 
-Yang Berhasil
+### Yang Berhasil
 
-* Median filter efektif mengurangi noise
-* Histogram equalization meningkatkan kontras (histogram lebih menyebar)
-* Sharpening mengembalikan detail yang hilang
+* **Median filter** yang diimplementasikan secara manual dengan kernel 5x5 mampu mengurangi noise, khususnya salt-and-pepper noise, dengan cukup efektif karena setiap pixel diganti dengan nilai median dari tetangganya sehingga outlier dapat dihilangkan tanpa terlalu merusak struktur utama citra.
+* **Histogram equalization** yang dilakukan menggunakan perhitungan histogram, CDF, dan LUT berhasil meningkatkan kontras citra secara signifikan, terlihat dari distribusi intensitas yang menjadi lebih merata dibandingkan citra awal.
+* **Sharpening** menggunakan kernel sederhana berhasil mempertegas tepi dan detail yang sebelumnya sedikit blur akibat proses denoising, sehingga hasil akhir terlihat lebih jelas dan tajam.
+
+### Yang Bisa Ditingkatkan
+
+* Penggunaan median filter dengan ukuran kernel 5x5 menyebabkan beberapa detail halus ikut hilang sehingga citra menjadi sedikit blur.
+* Histogram equalization yang bersifat global membuat peningkatan kontras tidak merata pada semua bagian citra dan dapat menyebabkan beberapa area terlalu terang atau gelap.
+* Proses sharpening berpotensi memperkuat sisa noise yang masih ada sehingga hasil akhir bisa terlihat kurang natural pada bagian tertentu.
+
 
 ## Cara Menjalankan Program
 
