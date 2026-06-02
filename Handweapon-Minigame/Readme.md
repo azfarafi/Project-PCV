@@ -1,5 +1,9 @@
 # Handweapon Mini Game 
 
+Nama : Azfarafi Gustiar Jati
+
+NRP : 5024241037
+
 Mini game bertema **Fruit Ninja** sederhana menggunakan **deteksi tangan sebagai pisau**.  
 Game dikembangkan hanya dengan **Python + OpenCV + NumPy**, tanpa framework atau game engine tambahan.
 
@@ -68,7 +72,20 @@ python main.py
 
 ---
 ## Dokumentasi
-- **Screenshot Game**: [Gameplay](docs/screenshoot1.png)
-- **Screenshot Menang**: [Menang](docs/screenshoot2.png)
-- **Screenshot Kalah**: [Kalah](docs/screenshoot3.png)
+
+**Screenshot Game**
+<p align="center">
+  <img src="docs/screenshoot1.png" width="400">
+</p>
+
+**Screenshot Menang**
+<p align="center">
+  <img src="docs/screenshoot2.png" width="400">
+</p>
+
+**Screenshot Kalah**
+<p align="center">
+  <img src="docs/screenshoot3.png" width="400">
+</p>
+
 - **Video Demo**: [Tonton Video Demo](docs/demo.mp4)
