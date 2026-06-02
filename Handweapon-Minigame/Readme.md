@@ -88,4 +88,10 @@ python main.py
   <img src="docs/screenshoot3.png" width="400">
 </p>
 
-- **Video Demo**: [Tonton Video Demo](docs/demo.mp4)
+- **Video Demo**: 
+
+https://github.com/user-attachments/assets/33a70d18-60f8-4795-881d-0225f27e774e
+
+
+
+
