@@ -45,7 +45,7 @@ def play_game():
     frame_count = 0
     start_time = time.time()
     GAME_DURATION = 15
-    WIN_THRESHOLD = 5  # jumlah target yang harus dihancurkan untuk menang
+    WIN_THRESHOLD = 5  
 
     while True:
         ret, frame = cap.read()
@@ -93,6 +93,9 @@ def play_game():
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2)
 
         cv2.imshow("Game Window", game_frame)
+        cv2.imshow("Detection Window", frame)   # kamera dengan kotak biru
+        cv2.imshow("Blue Mask", blue_mask)      # hasil masking biru
+
         frame_count += 1
 
         if remaining <= 0:
